@@ -1,0 +1,35 @@
+{
+  "name": "purescript-flow",
+  "version": "0.0.1",
+  "description": "Typesafe UI and API Flows for Mobile and Web Apps.",
+  "license": "AGPL",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^3.0.0",
+    "purescript-console": "^3.0.0",
+    "purescript-foreign-generic": "^4.1.0",
+    "purescript-generics": "^4.0.0",
+    "purescript-aff": "^3.1.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juspay/purescript-flow"
+  },
+  "keywords": [
+    "flow",
+    "typed UI",
+    "typesafe flows"
+  ],
+   "authors": [
+    "JUSPAY Technologies Pvt. Ltd. <info@juspay.in>"
+  ]
+}

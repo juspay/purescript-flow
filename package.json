@@ -1,0 +1,20 @@
+{
+  "name": "purescript-flow",
+  "version": "0.0.1",
+  "description": "Typesafe UI and API Flows for Mobile and Web Apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/juspay/purescript-flow.git"
+  },
+  "author": "JUSPAY Technologies Pvt. Ltd. <info@juspay.in>",
+  "license": "AGPL",
+  "homepage": "https://www.juspay.in",
+  "devDependencies": {
+    "pulp": "^11.0.0",
+    "purescript": "^0.11.4"
+  }
+}
