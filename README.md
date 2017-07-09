@@ -1,6 +1,8 @@
 # purescript-flow
 > Generic typesafe UI and API flows for mobile and web apps.
 
+[![Latest release](https://img.shields.io/github/release/juspay/purescript-flow.svg)](https://github.com/juspay/purescript-flow/releases)
+
 [![NPM Version][npm-image]][npm-url]
 
 ## Installation
@@ -31,10 +33,6 @@ This project is licensed under the AGPL License - see the [LICENSE](LICENSE) fil
 4. Push to the branch (`git push origin feature/foo-bar`)
 5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
 
 
 
