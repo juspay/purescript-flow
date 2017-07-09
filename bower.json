@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/juspay/purescript-flow"
+    "url": "git@github.com:juspay/purescript-flow.git"
   },
   "keywords": [
     "flow",
