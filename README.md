@@ -3,8 +3,6 @@
 
 [![Latest release](https://img.shields.io/github/release/juspay/purescript-flow.svg)](https://github.com/juspay/purescript-flow/releases)
 
-[![NPM Version][npm-image]][npm-url]
-
 ## Installation
 
 Install from bower or copy the source to your projects `bower_components`.
