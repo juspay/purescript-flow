@@ -4,7 +4,9 @@
   "description": "Typesafe UI and API Flows for Mobile and Web Apps.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf output && rm -rf .pulp-cache",
+    "build": "pulp build",
+    "test": "pulp test"
   },
   "repository": {
     "type": "git",
