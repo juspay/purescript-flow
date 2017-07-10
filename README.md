@@ -5,7 +5,7 @@
 
 ## Installation
 
-Install from bower or copy the source to your projects `bower_components`.
+Install from bower or copy the source to your project's `bower_components`.
 
 ```
 bower install purescript-flow --save
@@ -13,7 +13,7 @@ bower install purescript-flow --save
 
 ## Examples
 
-Checkout the examples in `test`.
+Checkout the examples in [test](test).
 
 
 ## License
