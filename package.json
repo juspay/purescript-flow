@@ -1,6 +1,6 @@
 {
   "name": "purescript-flow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Typesafe UI and API Flows for Mobile and Web Apps.",
   "main": "index.js",
   "scripts": {
