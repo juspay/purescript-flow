@@ -23,7 +23,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/agpl.html>.
 -}
 
-module Api where
+module Flow.Api where
 
 import Prelude
 import Control.Monad.Aff (Aff)
@@ -75,8 +75,8 @@ defaultPost = { method: POST
               , content: ""
               , headers: [Header "ContentType" "application/json"] }
 
-isValidAction :: forall a e. Decode a => String -> Aff e a
-isValidAction x = case (runExcept (decodeJSON x)) of
+decodeAction :: forall a e. Decode a => String -> Aff e a
+decodeAction x = case (runExcept (decodeJSON x)) of
   Right y -> pure $ y
   Left err -> throwError (error (show err))
 

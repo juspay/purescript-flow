@@ -32,24 +32,23 @@ import Control.Monad.Eff.Exception (EXCEPTION)
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (encodeJSON)
 import Data.Generic.Rep (class Generic)
-import UI (class UIScreen, UI, defaultDecode, defaultEncode, generateMockEvents, isValidAction, ui)
+import Flow.UI (class UIScreen, UI, defaultDecode, defaultEncode, ui, decodeAction)
 
 
 data LoginScreen = LoginScreen String
 data LoginScreenAction = RequestOtp String | Abort
 
 instance loginScreen :: UIScreen LoginScreen LoginScreenAction where
-  generateMockEvents _ = [RequestOtp "919999999999", Abort]
-  ui x = genericShowUI x (generateMockEvents x :: Array LoginScreenAction)
+  ui x = genericShowUI x
 
 derive instance genericLoginScreenAction  :: Generic LoginScreenAction _
 instance decodeLoginScreenAction :: Decode LoginScreenAction where decode = defaultDecode
 instance encodeLoginScreenAction :: Encode LoginScreenAction where encode = defaultEncode
 
-genericShowUI :: forall a b e. Encode b => Decode b => a -> Array b -> Aff (ui::UI | e) b
-genericShowUI a b = do
+genericShowUI :: forall a b e. Encode b => Decode b => a -> Aff (ui::UI | e) b
+genericShowUI a = do
   res <- makeAff (\err sc -> sc (encodeJSON (RequestOtp "919999999999")))
-  isValidAction res
+  decodeAction res
 
 appLoginFlow :: Aff(ui :: UI) String
 appLoginFlow = do
