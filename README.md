@@ -1,7 +1,7 @@
 # purescript-flow
 > Generic typesafe UI and API flows for mobile and web apps.
 
-[![Latest release](https://img.shields.io/github/release/juspay/purescript-flow.svg)](https://github.com/juspay/purescript-flow/releases) [![Build Status](https://travis-ci.org/juspay/purescript-flow.svg?branch=master)](https://travis-ci.org/juspay/purescript-flow)
+[![Bower](https://img.shields.io/bower/v/purescript-flow.svg)](https://github.com/juspay/purescript-flow/releases) [![Build Status](https://travis-ci.org/juspay/purescript-flow.svg?branch=master)](https://travis-ci.org/juspay/purescript-flow)
 
 ## Installation
 
