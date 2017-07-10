@@ -25,7 +25,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/agpl.html>.
 
 -}
 
-module UI where
+module Flows.UI where
 
 import Prelude
 import Control.Monad.Aff (Aff)
@@ -43,10 +43,9 @@ foreign import data UI :: Effect
 
 class UIScreen a b where
   ui::forall e. Encode b => a -> Aff (ui::UI|e) b
-  generateMockEvents :: Encode b => a -> Array b
 
-isValidAction :: forall a e. Decode a => String -> Aff e a
-isValidAction x = case (runExcept (decodeJSON x)) of
+decodeAction :: forall a e. Decode a => String -> Aff e a
+decodeAction x = case (runExcept (decodeJSON x)) of
   Right y -> pure $ y
   Left err -> throwError (error (show err))
 

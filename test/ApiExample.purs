@@ -27,8 +27,8 @@ along with this program. If not, see <https://www.gnu.org/licenses/agpl.html>.
 module ApiExample where
 
 import Prelude
-import Api (class ApiRequest, class Requestable, class Responsdable, Request(Request)
-            , Response, defaultPost, fromResponse, genericFromResponse, isValidAction, request)
+import Flows.Api (class ApiRequest, class Requestable, class Responsdable, Request(Request)
+            , Response, defaultPost, fromResponse, genericFromResponse, decodeAction, request)
 import Control.Monad.Aff (Aff, makeAff)
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, encodeJSON, genericDecode, genericEncode)
@@ -58,7 +58,7 @@ instance requestOtpReq :: ApiRequest RequestOtp RequestOtpResp where
 
 
 genericRequestHandler :: forall a e. Requestable a => Encode a => a -> Aff e Response
-genericRequestHandler x = (makeAff (\err sc -> sc (encodeJSON (RequestOtpResp {status: "ok"})))) >>= isValidAction
+genericRequestHandler x = (makeAff (\err sc -> sc (encodeJSON (RequestOtpResp {status: "ok"})))) >>= decodeAction
 
 derive instance genericRequestOtp :: Generic RequestOtp _
 instance encodeRequestOtp :: Encode RequestOtp where
