@@ -32,7 +32,7 @@ import Control.Monad.Eff.Exception (EXCEPTION)
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (encodeJSON)
 import Data.Generic.Rep (class Generic)
-import Flows.UI (class UIScreen, UI, defaultDecode, defaultEncode, ui, decodeAction)
+import Flow.UI (class UIScreen, UI, defaultDecode, defaultEncode, ui, decodeAction)
 
 
 data LoginScreen = LoginScreen String

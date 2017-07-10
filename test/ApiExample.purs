@@ -27,7 +27,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/agpl.html>.
 module ApiExample where
 
 import Prelude
-import Flows.Api (class ApiRequest, class Requestable, class Responsdable, Request(Request)
+import Flow.Api (class ApiRequest, class Requestable, class Responsdable, Request(Request)
             , Response, defaultPost, fromResponse, genericFromResponse, decodeAction, request)
 import Control.Monad.Aff (Aff, makeAff)
 import Data.Foreign.Class (class Decode, class Encode)

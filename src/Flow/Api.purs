@@ -23,7 +23,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/agpl.html>.
 -}
 
-module Flows.Api where
+module Flow.Api where
 
 import Prelude
 import Control.Monad.Aff (Aff)

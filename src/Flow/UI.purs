@@ -25,7 +25,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/agpl.html>.
 
 -}
 
-module Flows.UI where
+module Flow.UI where
 
 import Prelude
 import Control.Monad.Aff (Aff)
